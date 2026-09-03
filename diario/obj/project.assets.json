@@ -265,18 +265,43 @@
           }
         }
       },
+      "diario.Business/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "diario.Model": "1.0.0",
+          "diario.data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/diario.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/diario.Business.dll": {}
+        }
+      },
       "diario.data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "9.0.0",
-          "Pomelo.EntityFrameworkCore.MySql": "9.0.0"
+          "Pomelo.EntityFrameworkCore.MySql": "9.0.0",
+          "diario.Model": "1.0.0"
         },
         "compile": {
           "bin/placeholder/diario.data.dll": {}
         },
         "runtime": {
           "bin/placeholder/diario.data.dll": {}
+        }
+      },
+      "diario.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/diario.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/diario.Model.dll": {}
         }
       }
     }
@@ -704,14 +729,25 @@
         "pomelo.entityframeworkcore.mysql.nuspec"
       ]
     },
+    "diario.Business/1.0.0": {
+      "type": "project",
+      "path": "../diario.Business/diario.Business.csproj",
+      "msbuildProject": "../diario.Business/diario.Business.csproj"
+    },
     "diario.data/1.0.0": {
       "type": "project",
       "path": "../diario.data/diario.data.csproj",
       "msbuildProject": "../diario.data/diario.data.csproj"
+    },
+    "diario.Model/1.0.0": {
+      "type": "project",
+      "path": "../diario.Model/diario.Model.csproj",
+      "msbuildProject": "../diario.Model/diario.Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "diario.Business >= 1.0.0",
       "diario.data >= 1.0.0"
     ]
   },
@@ -741,6 +777,9 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
+            "c:\\workplace\\Luis\\diario.Business\\diario.Business.csproj": {
+              "projectPath": "c:\\workplace\\Luis\\diario.Business\\diario.Business.csproj"
+            },
             "C:\\workplace\\Luis\\diario.data\\diario.data.csproj": {
               "projectPath": "C:\\workplace\\Luis\\diario.data\\diario.data.csproj"
             }

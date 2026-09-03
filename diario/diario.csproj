@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\diario.Business\diario.Business.csproj" />
     <ProjectReference Include="..\diario.data\diario.data.csproj" />
   </ItemGroup>
 

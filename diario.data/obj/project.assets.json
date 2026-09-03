@@ -805,6 +805,16 @@
         "build": {
           "buildTransitive/net6.0/_._": {}
         }
+      },
+      "diario.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/diario.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/diario.Model.dll": {}
+        }
       }
     }
   },
@@ -2471,13 +2481,19 @@
         "system.composition.typedparts.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "diario.Model/1.0.0": {
+      "type": "project",
+      "path": "../diario.Model/diario.Model.csproj",
+      "msbuildProject": "../diario.Model/diario.Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
       "Microsoft.EntityFrameworkCore >= 9.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.0",
-      "Pomelo.EntityFrameworkCore.MySql >= 9.0.0"
+      "Pomelo.EntityFrameworkCore.MySql >= 9.0.0",
+      "diario.Model >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2505,7 +2521,11 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "c:\\workplace\\Luis\\diario.Model\\diario.Model.csproj": {
+              "projectPath": "c:\\workplace\\Luis\\diario.Model\\diario.Model.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -28,7 +28,6 @@ void CriarRegistro(RegistroDAO diario, int usuarioId)
 
     Console.WriteLine("Conteudo: ");
     string conteudo = Console.ReadLine();
-
     diario.Inserir(new Registro
     {
         Titulo = titulo,
