@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RXdhn6zb4mM=",
+  "dgSpecHash": "JYWs86S2RV4=",
   "success": true,
-  "projectFilePath": "c:\\workplace\\Luis\\diario.Business\\diario.Business.csproj",
+  "projectFilePath": "C:\\workplace\\Luis\\diario.Business\\diario.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Prog_Sis\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.0\\microsoft.entityframeworkcore.9.0.0.nupkg.sha512",
     "C:\\Users\\Prog_Sis\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.0\\microsoft.entityframeworkcore.abstractions.9.0.0.nupkg.sha512",

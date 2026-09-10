@@ -10,6 +10,8 @@
   <ItemGroup>
     <ProjectReference Include="..\diario.Business\diario.Business.csproj" />
     <ProjectReference Include="..\diario.data\diario.data.csproj" />
+    <ProjectReference Include="..\diario.Model\diario.Model.csproj" />
+    <ProjectReference Include="..\diario.Service\diario.Service.csproj" />
   </ItemGroup>
 
 </Project>

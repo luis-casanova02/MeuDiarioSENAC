@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\diario.Model\diario.Model.csproj" />
+    <ProjectReference Include="..\diario.Service\diario.Service.csproj" />
   </ItemGroup>
 
 </Project>

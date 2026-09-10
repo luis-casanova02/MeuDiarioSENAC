@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\workplace\\Luis\\diario.Business\\diario.Business.csproj": {}
+    "C:\\workplace\\Luis\\diario.Business\\diario.Business.csproj": {}
   },
   "projects": {
-    "c:\\workplace\\Luis\\diario.Business\\diario.Business.csproj": {
+    "C:\\workplace\\Luis\\diario.Business\\diario.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\workplace\\Luis\\diario.Business\\diario.Business.csproj",
+        "projectUniqueName": "C:\\workplace\\Luis\\diario.Business\\diario.Business.csproj",
         "projectName": "diario.Business",
-        "projectPath": "c:\\workplace\\Luis\\diario.Business\\diario.Business.csproj",
+        "projectPath": "C:\\workplace\\Luis\\diario.Business\\diario.Business.csproj",
         "packagesPath": "C:\\Users\\Prog_Sis\\.nuget\\packages\\",
-        "outputPath": "c:\\workplace\\Luis\\diario.Business\\obj\\",
+        "outputPath": "C:\\workplace\\Luis\\diario.Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Prog_Sis\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -30,8 +30,8 @@
               "C:\\workplace\\Luis\\diario.data\\diario.data.csproj": {
                 "projectPath": "C:\\workplace\\Luis\\diario.data\\diario.data.csproj"
               },
-              "c:\\workplace\\Luis\\diario.Model\\diario.Model.csproj": {
-                "projectPath": "c:\\workplace\\Luis\\diario.Model\\diario.Model.csproj"
+              "C:\\workplace\\Luis\\diario.Model\\diario.Model.csproj": {
+                "projectPath": "C:\\workplace\\Luis\\diario.Model\\diario.Model.csproj"
               }
             }
           }
@@ -369,8 +369,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "c:\\workplace\\Luis\\diario.Model\\diario.Model.csproj": {
-                "projectPath": "c:\\workplace\\Luis\\diario.Model\\diario.Model.csproj"
+              "C:\\workplace\\Luis\\diario.Model\\diario.Model.csproj": {
+                "projectPath": "C:\\workplace\\Luis\\diario.Model\\diario.Model.csproj"
               }
             }
           }
@@ -701,14 +701,14 @@
         }
       }
     },
-    "c:\\workplace\\Luis\\diario.Model\\diario.Model.csproj": {
+    "C:\\workplace\\Luis\\diario.Model\\diario.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\workplace\\Luis\\diario.Model\\diario.Model.csproj",
+        "projectUniqueName": "C:\\workplace\\Luis\\diario.Model\\diario.Model.csproj",
         "projectName": "diario.Model",
-        "projectPath": "c:\\workplace\\Luis\\diario.Model\\diario.Model.csproj",
+        "projectPath": "C:\\workplace\\Luis\\diario.Model\\diario.Model.csproj",
         "packagesPath": "C:\\Users\\Prog_Sis\\.nuget\\packages\\",
-        "outputPath": "c:\\workplace\\Luis\\diario.Model\\obj\\",
+        "outputPath": "C:\\workplace\\Luis\\diario.Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Prog_Sis\\AppData\\Roaming\\NuGet\\NuGet.Config"

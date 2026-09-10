@@ -303,6 +303,20 @@
         "runtime": {
           "bin/placeholder/diario.Model.dll": {}
         }
+      },
+      "diario.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "diario.Business": "1.0.0",
+          "diario.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/diario.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/diario.Service.dll": {}
+        }
       }
     }
   },
@@ -743,11 +757,18 @@
       "type": "project",
       "path": "../diario.Model/diario.Model.csproj",
       "msbuildProject": "../diario.Model/diario.Model.csproj"
+    },
+    "diario.Service/1.0.0": {
+      "type": "project",
+      "path": "../diario.Service/diario.Service.csproj",
+      "msbuildProject": "../diario.Service/diario.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
       "diario.Business >= 1.0.0",
+      "diario.Model >= 1.0.0",
+      "diario.Service >= 1.0.0",
       "diario.data >= 1.0.0"
     ]
   },
@@ -777,11 +798,17 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "c:\\workplace\\Luis\\diario.Business\\diario.Business.csproj": {
-              "projectPath": "c:\\workplace\\Luis\\diario.Business\\diario.Business.csproj"
+            "C:\\workplace\\Luis\\diario.Business\\diario.Business.csproj": {
+              "projectPath": "C:\\workplace\\Luis\\diario.Business\\diario.Business.csproj"
             },
             "C:\\workplace\\Luis\\diario.data\\diario.data.csproj": {
               "projectPath": "C:\\workplace\\Luis\\diario.data\\diario.data.csproj"
+            },
+            "C:\\workplace\\Luis\\diario.Model\\diario.Model.csproj": {
+              "projectPath": "C:\\workplace\\Luis\\diario.Model\\diario.Model.csproj"
+            },
+            "c:\\workplace\\Luis\\diario.Service\\diario.Service.csproj": {
+              "projectPath": "c:\\workplace\\Luis\\diario.Service\\diario.Service.csproj"
             }
           }
         }

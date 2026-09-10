@@ -8,6 +8,8 @@
     ".NETCoreApp,Version=v10.0": {
       "diario/1.0.0": {
         "dependencies": {
+          "diario.Business": "1.0.0",
+          "diario.Model": "1.0.0",
           "diario.data": "1.0.0"
         },
         "runtime": {
@@ -173,13 +175,34 @@
           }
         }
       },
+      "diario.Business/1.0.0": {
+        "dependencies": {
+          "diario.Model": "1.0.0",
+          "diario.data": "1.0.0"
+        },
+        "runtime": {
+          "diario.Business.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "diario.data/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "9.0.0",
-          "Pomelo.EntityFrameworkCore.MySql": "9.0.0"
+          "Pomelo.EntityFrameworkCore.MySql": "9.0.0",
+          "diario.Model": "1.0.0"
         },
         "runtime": {
           "diario.data.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "diario.Model/1.0.0": {
+        "runtime": {
+          "diario.Model.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -291,7 +314,17 @@
       "path": "pomelo.entityframeworkcore.mysql/9.0.0",
       "hashPath": "pomelo.entityframeworkcore.mysql.9.0.0.nupkg.sha512"
     },
+    "diario.Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "diario.data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "diario.Model/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

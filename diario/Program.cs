@@ -1,5 +1,6 @@
 ﻿var diario = new RegistroDAO();
 var contexto = new MeuDiarioSENACContext();
+RegistrosBusiness registrosBusiness = new RegistrosBusiness(new Registro());
 
 Usuario usuarioPadrao = contexto.Usuarios.FirstOrDefault(u => u.Nome == "Usuário Padrão");
 if (usuarioPadrao == null)
@@ -26,16 +27,24 @@ void CriarRegistro(RegistroDAO diario, int usuarioId)
         return;
     }
 
-    Console.WriteLine("Conteudo: ");
-    string conteudo = Console.ReadLine();
-    diario.Inserir(new Registro
+    try
     {
-        Titulo = titulo,
-        Data = data,
-        Conteudo = conteudo,
-        UsuarioId = usuarioId
-    });
-    Console.WriteLine("\nRegistro inserido com sucesso!\n");
+        registrosBusiness.TituloInformado();
+        Console.WriteLine("Conteudo: ");
+        string conteudo = Console.ReadLine();
+        diario.Inserir(new Registro
+        {
+            Titulo = titulo,
+            Data = data,
+            Conteudo = conteudo,
+            UsuarioId = usuarioId
+        });
+        Console.WriteLine("\nRegistro inserido com sucesso!\n");
+    }
+    catch (ArgumentException ex)
+    {
+        Console.WriteLine($"\nErro: {ex.Message}\n");
+    }
 }
 
 void ListarRegistros(RegistroDAO diario)

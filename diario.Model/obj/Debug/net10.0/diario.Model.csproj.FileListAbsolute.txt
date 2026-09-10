@@ -1,0 +1,12 @@
+C:\workplace\Luis\diario.Model\bin\Debug\net10.0\diario.Model.deps.json
+C:\workplace\Luis\diario.Model\bin\Debug\net10.0\diario.Model.dll
+C:\workplace\Luis\diario.Model\bin\Debug\net10.0\diario.Model.pdb
+C:\workplace\Luis\diario.Model\obj\Debug\net10.0\diario.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\workplace\Luis\diario.Model\obj\Debug\net10.0\diario.Model.AssemblyInfoInputs.cache
+C:\workplace\Luis\diario.Model\obj\Debug\net10.0\diario.Model.AssemblyInfo.cs
+C:\workplace\Luis\diario.Model\obj\Debug\net10.0\diario.Model.csproj.CoreCompileInputs.cache
+C:\workplace\Luis\diario.Model\obj\Debug\net10.0\diario.Model.sourcelink.json
+C:\workplace\Luis\diario.Model\obj\Debug\net10.0\diario.Model.dll
+C:\workplace\Luis\diario.Model\obj\Debug\net10.0\refint\diario.Model.dll
+C:\workplace\Luis\diario.Model\obj\Debug\net10.0\diario.Model.pdb
+C:\workplace\Luis\diario.Model\obj\Debug\net10.0\ref\diario.Model.dll

@@ -2522,8 +2522,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "c:\\workplace\\Luis\\diario.Model\\diario.Model.csproj": {
-              "projectPath": "c:\\workplace\\Luis\\diario.Model\\diario.Model.csproj"
+            "C:\\workplace\\Luis\\diario.Model\\diario.Model.csproj": {
+              "projectPath": "C:\\workplace\\Luis\\diario.Model\\diario.Model.csproj"
             }
           }
         }
