@@ -1,6 +1,6 @@
 ﻿var diario = new RegistroDAO();
+var registroService = new RegistroService(diario);
 var contexto = new MeuDiarioSENACContext();
-RegistrosBusiness registrosBusiness = new RegistrosBusiness(new Registro());
 
 Usuario usuarioPadrao = contexto.Usuarios.FirstOrDefault(u => u.Nome == "Usuário Padrão");
 if (usuarioPadrao == null)
@@ -10,7 +10,7 @@ if (usuarioPadrao == null)
     contexto.SaveChanges();
 }
 
-void CriarRegistro(RegistroDAO diario, int usuarioId)
+void CriarRegistro(RegistroService registroService, int usuarioId)
 {
     Console.WriteLine("Titulo: ");
     string titulo = Console.ReadLine();
@@ -29,10 +29,9 @@ void CriarRegistro(RegistroDAO diario, int usuarioId)
 
     try
     {
-        registrosBusiness.TituloInformado();
         Console.WriteLine("Conteudo: ");
         string conteudo = Console.ReadLine();
-        diario.Inserir(new Registro
+        registroService.InserirRegistro(new Registro
         {
             Titulo = titulo,
             Data = data,
@@ -47,9 +46,9 @@ void CriarRegistro(RegistroDAO diario, int usuarioId)
     }
 }
 
-void ListarRegistros(RegistroDAO diario)
+void ListarRegistros(RegistroService registroService)
 {
-    var registros = diario.ListarTodos();
+    var registros = registroService.ListarTodos();
 
     if (registros.Count == 0)
     {
@@ -63,12 +62,12 @@ void ListarRegistros(RegistroDAO diario)
     }
 }
 
-void BuscarRegistro(RegistroDAO diario)
+void BuscarRegistro(RegistroService registroService)
 {
     Console.WriteLine("Digite o ID do registro: ");
     int id = int.Parse(Console.ReadLine());
 
-    var registro = diario.BuscarPorID(id);
+    var registro = registroService.BuscarRegistroPorId(id);
 
     if (registro == null)
     {
@@ -79,12 +78,12 @@ void BuscarRegistro(RegistroDAO diario)
     Console.WriteLine($"ID: {registro.Id}, Titulo: {registro.Titulo}, Data: {registro.Data}, Conteudo: {registro.Conteudo}, Usuario: {registro.Usuario?.Nome}");
 }
 
-void AtualizarRegistro(RegistroDAO diario)
+void AtualizarRegistro(RegistroService registroService)
 {
     Console.WriteLine("Digite o ID do registro a ser atualizado: ");
     int id = int.Parse(Console.ReadLine());
 
-    var registro = diario.BuscarPorID(id);
+    var registro = registroService.BuscarRegistroPorId(id);
     if (registro == null)
     {
         Console.WriteLine("\nRegistro não encontrado.\n");
@@ -97,16 +96,23 @@ void AtualizarRegistro(RegistroDAO diario)
     Console.WriteLine("Novo conteudo: ");
     registro.Conteudo = Console.ReadLine();
 
-    diario.Atualizar(registro);
-    Console.WriteLine("\nRegistro atualizado com sucesso!\n");
+    try
+    {
+        registroService.AtualizarRegistro(registro);
+        Console.WriteLine("\nRegistro atualizado com sucesso!\n");
+    }
+    catch (ArgumentException ex)
+    {
+        Console.WriteLine($"\nErro: {ex.Message}\n");
+    }
 }
 
-void ExcluirRegistro(RegistroDAO diario)
+void ExcluirRegistro(RegistroService registroService)
 {
     Console.WriteLine("Digite o ID do registro a ser excluído: ");
     int id = int.Parse(Console.ReadLine());
 
-    diario.Excluir(id);
+    registroService.ExcluirRegistro(id);
     Console.WriteLine("\nRegistro excluído com sucesso!\n");
 }
 
@@ -126,23 +132,23 @@ while (true)
     switch (opcao)
     {
         case "1":
-            CriarRegistro(diario, usuarioPadrao.Id);
+            CriarRegistro(registroService, usuarioPadrao.Id);
             Continue();
             break;
         case "2":
-            ListarRegistros(diario);
+            ListarRegistros(registroService);
             Continue();
             break;
         case "3":
-            BuscarRegistro(diario);
+            BuscarRegistro(registroService);
             Continue();
             break;
         case "4":
-            AtualizarRegistro(diario);
+            AtualizarRegistro(registroService);
             Continue();
             break;
         case "5":
-            ExcluirRegistro(diario);
+            ExcluirRegistro(registroService);
             Continue();
             break;
         case "6":

@@ -1,15 +1,47 @@
 public class RegistroService
 {
-    private readonly RegistrosBusiness _registrosBusiness;
+    private readonly RegistroDAO _registroDAO;
 
-    public RegistroService(RegistrosBusiness registrosBusiness)
+    public RegistroService(RegistroDAO registroDAO)
     {
-        _registrosBusiness = registrosBusiness;
+        _registroDAO = registroDAO;
     }
 
-    public void ValidarRegistro(Registro registro)
+    public void InserirRegistro(Registro registro)
     {
-        _registrosBusiness.TituloInformado();
-        // Adicione outras validações conforme necessário
+        ValidarRegistro(registro);
+        _registroDAO.Inserir(registro);
+    }
+
+    public List<Registro> ListarTodos()
+    {
+        return _registroDAO.ListarTodos();
+    }
+
+    public Registro? BuscarRegistroPorId(int id)
+    {
+        return _registroDAO.BuscarPorID(id);
+    }
+
+    public void AtualizarRegistro(Registro registro)
+    {
+        var existente = _registroDAO.BuscarPorID(registro.Id);
+        if (existente == null)
+            throw new InvalidOperationException("Registro não encontrado.");
+
+        ValidarRegistro(registro);
+        _registroDAO.Atualizar(registro);
+    }
+
+    public void ExcluirRegistro(int id)
+    {
+        _registroDAO.Excluir(id);
+    }
+
+    private void ValidarRegistro(Registro registro)
+    {
+        var business = new RegistrosBusiness(registro);
+        business.TituloInformado();
+        // outras validações de negócio entram aqui
     }
 }
