@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MeuDiarioSENAC.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7e9940d57d6446955d2a3f4f338d2a3a93eb16a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4762ba4d1cb3389c57657d1580ab98ed3d3770f")]
 [assembly: System.Reflection.AssemblyProductAttribute("MeuDiarioSENAC.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MeuDiarioSENAC.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,8 +1,23 @@
-var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddScoped<RegistroService>();
-var app = builder.Build();
+using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Mvc;
 
-app.MapGet("/", () => "Hello World!");
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<RegistroDAO>();
+builder.Services.AddScoped<RegistroService>();
+builder.Services.ConfigureHttpJsonOptions(options =>
+{
+    options.SerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+});
+
+var app = builder.Build();
+var registrosGroup = app.MapGroup("/registros");
+
+registrosGroup.MapPost("/", ([FromBody] Registro registro, RegistroService registroService) =>
+{
+    registroService.InserirRegistro(registro);
+    return Results.Created($"/registros/{registro.Id}", registro);
+});
 
 app.MapGet("/registros", (RegistroService registroService) =>
 {
