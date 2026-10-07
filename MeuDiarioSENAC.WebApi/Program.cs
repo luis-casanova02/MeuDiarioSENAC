@@ -11,6 +11,13 @@ builder.Services.ConfigureHttpJsonOptions(options =>
 });
 
 var app = builder.Build();
+
+app.MapPost("/login/auth", () =>
+{
+    TokenService authService = new TokenService(builder.Configuration);
+    return authService.GenerateToken(null);
+});
+
 var registrosGroup = app.MapGroup("/registros");
 
 registrosGroup.MapPost("/", ([FromBody] Registro registro, RegistroService registroService) =>
