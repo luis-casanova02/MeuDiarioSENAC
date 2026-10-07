@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "c:\\workplace\\Luis\\diario.Service\\diario.Service.csproj": {}
+    "C:\\workplace\\Luis\\diario.Service\\diario.Service.csproj": {}
   },
   "projects": {
     "C:\\workplace\\Luis\\diario.Business\\diario.Business.csproj": {
@@ -1036,14 +1036,14 @@
         }
       }
     },
-    "c:\\workplace\\Luis\\diario.Service\\diario.Service.csproj": {
+    "C:\\workplace\\Luis\\diario.Service\\diario.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\workplace\\Luis\\diario.Service\\diario.Service.csproj",
+        "projectUniqueName": "C:\\workplace\\Luis\\diario.Service\\diario.Service.csproj",
         "projectName": "diario.Service",
-        "projectPath": "c:\\workplace\\Luis\\diario.Service\\diario.Service.csproj",
+        "projectPath": "C:\\workplace\\Luis\\diario.Service\\diario.Service.csproj",
         "packagesPath": "C:\\Users\\Prog_Sis\\.nuget\\packages\\",
-        "outputPath": "c:\\workplace\\Luis\\diario.Service\\obj\\",
+        "outputPath": "C:\\workplace\\Luis\\diario.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Prog_Sis\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1061,6 +1061,9 @@
             "projectReferences": {
               "C:\\workplace\\Luis\\diario.Business\\diario.Business.csproj": {
                 "projectPath": "C:\\workplace\\Luis\\diario.Business\\diario.Business.csproj"
+              },
+              "C:\\workplace\\Luis\\diario.data\\diario.data.csproj": {
+                "projectPath": "C:\\workplace\\Luis\\diario.data\\diario.data.csproj"
               },
               "C:\\workplace\\Luis\\diario.Model\\diario.Model.csproj": {
                 "projectPath": "C:\\workplace\\Luis\\diario.Model\\diario.Model.csproj"
@@ -1084,6 +1087,12 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.20, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

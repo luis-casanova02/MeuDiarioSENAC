@@ -12,6 +12,7 @@ public class RegistroDAO
     public List<Registro> ListarTodos()
     {
         return conexao.Registros
+            .AsNoTracking()
             .Include(r => r.Usuario)
             .ToList();
     }
